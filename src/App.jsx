@@ -25,8 +25,14 @@ const handleUpdateSubmit = data =>{
       {/* <StatefulFrom></StatefulFrom> */}
       {/* <RefForm></RefForm> */}
       {/* <HookFrom></HookFrom> */}
-      <ReuseForm handleSubmit={handleSignUpSubmit} title={'Sign In'} ></ReuseForm>
-      <ReuseForm handleSubmit={handleSignUpSubmit} title={'Update'}></ReuseForm>
+      <ReuseForm handleSubmit={handleSignUpSubmit} title={'Sign In'} >
+        <h1>hello</h1>
+      </ReuseForm>
+      <ReuseForm handleSubmit={handleSignUpSubmit} title={'Update'}>
+        <h1>
+          hi
+        </h1>
+      </ReuseForm>
     </>
   )
 }

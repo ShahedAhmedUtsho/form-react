@@ -1,6 +1,6 @@
 
 
-const ReuseForm = ( {handleSubmit,title}) => {
+const ReuseForm = ( {handleSubmit,title,children}) => {
     const handleNowSubmit = (e) => {
         e.preventDefault() ;
         const data = {
@@ -14,6 +14,7 @@ const ReuseForm = ( {handleSubmit,title}) => {
     }
     return (
         <div>
+            {children}
             <form onSubmit={handleNowSubmit} className="form" >
                 <input  type="text" name="name" /><br />
                 <input type="email" name="email" /><br />
