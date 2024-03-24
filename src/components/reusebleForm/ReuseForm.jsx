@@ -1,17 +1,24 @@
 
 
-const ReuseForm = () => {
-    const handleSubmit = (e) => {
+const ReuseForm = ( {handleSubmit,title}) => {
+    const handleNowSubmit = (e) => {
         e.preventDefault() ;
-        console.log("okey")
+        const data = {
+            title : title ,
+            UserName : e.target.name.value,
+            email : e.target.email.value,
+
+        }
+        handleSubmit(data)
+
     }
     return (
         <div>
-            <form onSubmit={handleSubmit} className="form" >
+            <form onSubmit={handleNowSubmit} className="form" >
                 <input  type="text" name="name" /><br />
-                <input type="text" name="email" /><br />
+                <input type="email" name="email" /><br />
                 <button  type="submit">
-                    submit
+                    {title}
                 </button>
             </form>
         </div>

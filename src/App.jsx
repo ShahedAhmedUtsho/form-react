@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 
 import './App.css'
 import Form from './components/form/Form'
@@ -8,7 +8,16 @@ import HookFrom from './components/hookForm/Hookfrom/HookFrom'
 import ReuseForm from './components/reusebleForm/ReuseForm'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+  const handleSignUpSubmit = data => {
+   
+    console.log(data)
+}
+const handleUpdateSubmit = data =>{
+  console.log(data)
+}
+
 
   return (
     <>
@@ -16,7 +25,8 @@ function App() {
       {/* <StatefulFrom></StatefulFrom> */}
       {/* <RefForm></RefForm> */}
       {/* <HookFrom></HookFrom> */}
-      <ReuseForm></ReuseForm>
+      <ReuseForm handleSubmit={handleSignUpSubmit} title={'Sign In'} ></ReuseForm>
+      <ReuseForm handleSubmit={handleSignUpSubmit} title={'Update'}></ReuseForm>
     </>
   )
 }
